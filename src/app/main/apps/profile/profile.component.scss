@@ -1,0 +1,70 @@
+@import "src/@fuse/scss/fuse";
+
+#profile {
+
+    .hoverable {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      height: 200px;
+      width: 200px;
+      border: 5px solid #000;
+      border-radius: 50%;
+}
+
+    .hoverable .hover-text {
+      position: absolute;
+      display: none;
+      top: 50%;
+      left:  50%;
+      transform: translate(-50%,-50%);   
+      z-index: 2;
+    }
+
+    .header {
+        height: 320px;
+        min-height: 320px;
+        max-height: 320px;
+        background: url('/assets/images/backgrounds/dark-material-bg.jpg') no-repeat 0 45%;
+        background-size: cover;
+
+        .profile-image {
+            margin-right: 24px;
+            display: block;
+            cursor: pointer;
+            @include media-breakpoint('sm') {
+                margin: 0 0 16px 0;
+            }
+        }
+
+        .name {
+            font-size: 34px;
+            color: #FFFFFF;
+
+            @include media-breakpoint('sm') {
+                margin-bottom: 32px;
+            }
+        }
+
+        .actions {
+
+            button {
+                text-transform: none;
+                padding: 0 16px;
+                margin: 0 0 0 8px;
+            }
+        }
+    }
+
+    .content {
+        flex: 1;
+
+        mat-tab-group {
+            height: 100%;
+
+            .mat-tab-body-wrapper {
+                flex-grow: 1;
+            }
+        }
+    }
+}

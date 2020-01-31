@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>New Product</h1>
+<div mat-dialog-content>
+  <p>Please enter the Course title</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field>
+  <p>Please enter the Course category</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.category">
+  </mat-form-field>
+  <p>Please enter the Course length (mins)</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.length">
+  </mat-form-field>
+  <p>Please enter the Course content</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.content">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
